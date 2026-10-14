@@ -1,0 +1,9 @@
+[package]
+name = "kernel"
+description = "Shared value types: prices, quantities, money, ids, instrument specs."
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,23 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[workspace.dependencies]
+kernel = { path = "crates/kernel" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+# Determinism bans are configured in clippy.toml.
+disallowed_types = "deny"
+disallowed_methods = "deny"
+
+[profile.release]
+# Overflow in money code must panic, never wrap.
+overflow-checks = true

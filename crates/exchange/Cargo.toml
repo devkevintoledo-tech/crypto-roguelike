@@ -1,0 +1,12 @@
+[package]
+name = "exchange"
+description = "Order books and matching. Emits fills; never touches balances."
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+kernel.workspace = true
+
+[lints]
+workspace = true
